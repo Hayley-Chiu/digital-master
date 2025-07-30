@@ -1,3 +1,36 @@
+// --- 尺寸偵測除錯碼 ---
+function showDeviceInfo() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const dpr = window.devicePixelRatio;
+
+  const info = `
+    寬度 (CSS Pixels): ${width}px
+    高度 (CSS Pixels): ${height}px
+    裝置像素比 (DPR): ${dpr}
+  `;
+
+  // 建立一個 div 來顯示資訊
+  const infoDiv = document.createElement("div");
+  infoDiv.style.position = "fixed";
+  infoDiv.style.bottom = "10px";
+  infoDiv.style.left = "10px";
+  infoDiv.style.padding = "10px";
+  infoDiv.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+  infoDiv.style.color = "white";
+  infoDiv.style.zIndex = "9999";
+  infoDiv.style.fontFamily = "monospace";
+  infoDiv.style.whiteSpace = "pre"; // 讓換行符號生效
+  infoDiv.innerText = info;
+
+  document.body.appendChild(infoDiv);
+}
+
+// 頁面載入時和視窗大小改變時都執行
+window.addEventListener("load", showDeviceInfo);
+window.addEventListener("resize", showDeviceInfo);
+// --- 除錯碼結束 ---
+
 // 著作權自動更新年分
 // 讓 Copyright 永遠顯示目前年份
 const year = new Date().getFullYear();
