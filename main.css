@@ -1,0 +1,399 @@
+/* * {
+  outline: 1px solid red;
+} */
+
+.body {
+  margin: 0;
+  padding: 0;
+  background-image: url(./images/background.png);
+  height: 100%;
+}
+
+.main {
+  position: fixed;
+  width: 55%;
+  height: 65%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: lightcoral; */
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  display: flex;
+  width: fit-content;
+  max-width: 90vw;
+  box-sizing: border-box;
+  flex-direction: column;
+  z-index: 5; /* 配合 book.png */
+}
+
+.logo img {
+  max-width: 780px;
+}
+
+.logo p {
+  text-align: right;
+  margin: 10px 0;
+  color: #3e3e3e;
+  font-weight: 500;
+  font-size: 22px;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.main_bg_image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.main_bg_image img {
+  width: 100vw;
+}
+
+/* 圓點裝飾 */
+.decoration_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.decoration1,
+.decoration2,
+.decoration3,
+.decoration4,
+.decoration5,
+.decoration6 {
+  position: absolute;
+}
+
+.decoration_container img {
+  width: 100%;
+  max-width: 100px;
+  transition: all 0.3s ease;
+}
+
+.decoration1 {
+  top: 11vh;
+  left: 12vw;
+}
+.decoration2 {
+  top: 23vh;
+  left: 22vw;
+}
+.decoration3 {
+  top: 33vh;
+  left: 9vw;
+}
+.decoration4 {
+  top: 10vh;
+  right: 23vw;
+}
+.decoration5 {
+  top: 26vh;
+  right: 14vw;
+}
+.decoration6 {
+  top: 31vh;
+  right: 6vw;
+}
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  gap: 45px;
+  z-index: 5; /* 配合 book.png */
+  padding-bottom: 30px;
+  box-sizing: border-box;
+
+  /* display: grid;
+  grid-template-columns: repeat(2, 230px);
+  grid-template-rows: 230px 245px 30px;
+  padding-bottom: 20px; */
+}
+
+/* 按鈕基本樣式 */
+button {
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+}
+
+button.e {
+  background-color: #f9ca06;
+  cursor: pointer;
+  width: 100%;
+}
+
+button.j {
+  background-color: #27cbd8;
+  cursor: pointer;
+  width: 100%;
+}
+
+button.download {
+  background-color: #efa707;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+button.download:hover {
+  filter: brightness(95%);
+}
+
+/* 按鈕點擊樣式 */
+button:active {
+  background-color: #c0c0c0;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  filter: brightness(95%);
+}
+
+.button_grid {
+  display: grid;
+  grid-template-rows: 32% 56% 18%;
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 15%;
+  border-color: #dddbdb;
+  background-color: white;
+  padding: 20px;
+  aspect-ratio: 1 / 1;
+  width: 200px;
+  align-items: start;
+  position: relative;
+  /* z-index: 2; */
+}
+
+.button_grid .title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.button_grid .title img {
+  width: 67.44px;
+  height: 73.01px;
+}
+
+.button_grid .title h2 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.button_grid .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10%;
+}
+
+.button_grid .content h4 {
+  margin: 0;
+}
+
+.button_grid .content p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.button_grid .button1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-evenly;
+}
+
+.button_grid2:hover {
+  cursor: pointer;
+}
+
+/* .shadow {
+   position: absolute;
+   width: 200px;
+   height: 200px;
+   border-radius: 15%;
+   bottom: -75px;
+   left: 95px;
+   background-color: #ffffff00;
+   transform: rotateX(-78deg) rotateY(-5deg) rotateZ(-24deg);
+   z-index: 1;
+   box-shadow: -157px 0px 10px 0px rgb(204 204 204 / 66%);
+ } */
+
+footer {
+  background-color: rgb(86, 209, 224);
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.d-none {
+  display: none;
+}
+
+.notice {
+  color: red;
+  font-size: 15px;
+}
+
+/*返回舊版按鈕先移除*/
+/*
+ #to_oldpage {
+   width: 200%;
+ }
+
+ #to_oldpage button {
+   background-color: #27cbd8;
+   cursor: pointer;
+   width: 100%;
+ }
+ */
+
+/* RWD */
+/* 當螢幕寬度小於或等於 768px (平板) */
+@media (max-width: 768px) {
+  .main {
+    min-width: 0;
+    width: 90%;
+    transition: min-width 0.3s ease;
+  }
+  .logo {
+    top: -20px;
+    /* transition: top 0.1s ease; */
+  }
+  .logo img {
+    width: 60vw;
+    transition: all 0.1s ease;
+  }
+  .logo p {
+    font-size: 16.5px;
+  }
+  .button_container {
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 45px;
+    top: 40%;
+  }
+
+  .decoration_container img {
+    max-width: 37%;
+  }
+  .decoration1 {
+    top: 6vh;
+    left: 5vw;
+  }
+  .decoration2 {
+    top: 13vh;
+    left: 13vw;
+  }
+  .decoration3 {
+    top: 19vh;
+    left: 2vw;
+  }
+  .decoration4 {
+    top: 5vh;
+    right: 10vw;
+    /* display: none; */
+  }
+  .decoration5 {
+    top: 14.5vh;
+    right: 3vw;
+    /* display: none; */
+  }
+  .decoration6 {
+    top: 16vh;
+    right: -5.5vw;
+  }
+}
+
+/* 當螢幕寬度小於或等於 480px (例如手機) */
+@media (max-width: 601px) {
+  .logo {
+    top: -55px;
+  }
+  .button_container {
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    width: 100%;
+    /* height: 585px;  */
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px 0;
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .button_container::-webkit-scrollbar {
+    display: none;
+  }
+  .main_bg_image {
+    bottom: 20px;
+  }
+
+  .decoration_container img {
+    max-width: 26%;
+  }
+  .decoration1 {
+    top: 3vh;
+    left: 5vw;
+  }
+  .decoration2 {
+    top: 8.5vh;
+    left: 12vw;
+  }
+  .decoration3 {
+    top: 15vh;
+    left: 2vw;
+  }
+  .decoration4 {
+    top: 2vh;
+    right: 7vw;
+  }
+  .decoration5 {
+    top: 10vh;
+    right: -2vw;
+    /* display: none; */
+  }
+  .decoration6 {
+    top: 11vh;
+    right: -13vw;
+  }
+
+  /* 卡片文字大小 */
+  /* .button_grid .content p,
+  .notice {
+    font-size: 13px;
+  } */
+}
