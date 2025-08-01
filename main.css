@@ -22,7 +22,7 @@
 .logo {
   position: absolute;
   left: 50%;
-  top: 10%;
+  top: 2%;
   transform: translateX(-50%);
   display: flex;
   width: fit-content;
@@ -33,7 +33,7 @@
 }
 
 .logo img {
-  max-width: 780px;
+  /* max-width: 780px; */
 }
 
 .logo p {
@@ -41,7 +41,7 @@
   margin: 10px 0;
   color: #3e3e3e;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 56px;
   font-family: "Noto Sans TC", sans-serif;
 }
 
@@ -85,36 +85,36 @@
 
 .decoration1 {
   top: 11vh;
-  left: 12vw;
+  left: 6vw;
 }
 .decoration2 {
   top: 23vh;
-  left: 22vw;
+  left: 11.5vw;
 }
 .decoration3 {
-  top: 33vh;
-  left: 9vw;
+  top: 38vh;
+  left: 3vw;
 }
 .decoration4 {
   top: 10vh;
-  right: 23vw;
-}
-.decoration5 {
-  top: 26vh;
   right: 14vw;
 }
+.decoration5 {
+  top: 32vh;
+  right: 9.5vw;
+}
 .decoration6 {
-  top: 31vh;
-  right: 6vw;
+  top: 34vh;
+  right: 4vw;
 }
 
 .button_container {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 0;
+  top: 65%;
   width: 100%;
-  gap: 45px;
+  gap: 15px;
   z-index: 5; /* 配合 book.png */
   padding-bottom: 30px;
   box-sizing: border-box;
@@ -135,7 +135,7 @@ button {
 }
 
 button.e {
-  background-color: #f9ca06;
+  background-color: #f2a81a; /* 原#f9ca06 */
   cursor: pointer;
   width: 100%;
 }
@@ -147,7 +147,7 @@ button.j {
 }
 
 button.download {
-  background-color: #efa707;
+  background-color: #a0c838; /* 原#efa707 */
   width: 100%;
   text-align: center;
   position: relative;
@@ -252,11 +252,6 @@ footer {
   display: none;
 }
 
-.notice {
-  color: red;
-  font-size: 15px;
-}
-
 /*返回舊版按鈕先移除*/
 /*
  #to_oldpage {
@@ -271,74 +266,163 @@ footer {
  */
 
 /* RWD */
-@media (max-width: 1200px) {
-  .main {
-    width: 80%;
-  }
+/* @media (min-width: 1401px) {
   .logo {
     top: 5%;
   }
   .button_container {
-    top: 50%;
+    top: 80%;
+    align-items: center;
   }
+} */
 
+/* @media (max-width: 1400px) {
+  .logo {
+    top: -2%;
+  }
+  .logo p {
+    font-size: 42px;
+  }
+  .button_container {
+    top: 55%;
+  }
   .decoration_container img {
-    max-width: 47%;
+    max-width: 80%;
   }
   .decoration1 {
-    top: 12vh;
+    top: 10vh;
     left: 5vw;
   }
   .decoration2 {
-    top: 23vh;
-    left: 8.5vw;
+    top: 22vh;
+    left: 12vw;
   }
   .decoration3 {
-    top: 32.5vh;
-    left: 3vw;
+    top: 32vh;
+    left: 2vw;
   }
   .decoration4 {
-    top: 11vh;
-    right: 10vw;
+    top: 10vh;
+    right: 14vw;
   }
   .decoration5 {
-    top: 24vh;
-    right: 3.5vw;
+    top: 24.5vh;
+    right: 6vw;
   }
   .decoration6 {
     top: 28vh;
-    right: -2.5vw;
+    right: 0vw;
   }
-}
+} */
 
-/* 當螢幕寬度小於或等於 768px (平板) */
-@media (max-width: 992px) {
+/* @media (max-width: 1200px) {
+  .logo p {
+    font-size: 34px;
+  }
+  .logo img {
+    max-width: 640px;
+  }
+  .button_container {
+    top: 52%;
+  }
+  .decoration_container img {
+    max-width: 60%;
+  }
+  .decoration1 {
+    top: 10vh;
+    left: 5vw;
+  }
+  .decoration2 {
+    top: 18.5vh;
+    left: 12vw;
+  }
+  .decoration3 {
+    top: 26.5vh;
+    left: 3vw;
+  }
+  .decoration4 {
+    top: 8.5vh;
+    right: 15vw;
+  }
+  .decoration5 {
+    top: 22vh;
+    right: 5.5vw;
+  }
+  .decoration6 {
+    top: 24.5vh;
+    right: -1vw;
+  }
+} */
+
+/* 平板尺寸 -- 直式 */
+/* @media (max-width: 992px) {
   .main {
     min-width: 0;
     width: 90%;
     transition: min-width 0.3s ease;
   }
   .logo {
-    top: -20px;
-    /* transition: top 0.1s ease; */
+    top: -8%;
   }
   .logo img {
-    width: 60vw;
+    width: 70vw;
     transition: all 0.1s ease;
   }
   .logo p {
-    font-size: 16.5px;
+    font-size: 31px;
   }
   .button_container {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    gap: 30px;
-    top: 35%;
   }
-
   .decoration_container img {
-    max-width: 37%;
+    max-width: 45%;
+  }
+  .decoration1 {
+    top: 6vh;
+    left: 5vw;
+  }
+  .decoration2 {
+    top: 13vh;
+    left: 9.5vw;
+  }
+  .decoration3 {
+    top: 20vh;
+    left: 2vw;
+  }
+  .decoration4 {
+    top: 5vh;
+    right: 10vw;
+  }
+  .decoration5 {
+    top: 14.5vh;
+    right: 3vw;
+  }
+  .decoration6 {
+    top: 16vh;
+    right: -5.5vw;
+  }
+} */
+
+/* 平板尺寸 -- 橫式 */
+/* @media (max-width: 992px) and (orientation: landscape) {
+  .main {
+    width: 90%;
+    height: 85%;
+  }
+  .logo img {
+    max-width: 56vw;
+  }
+  .button_container {
+    flex-wrap: nowrap;
+    align-items: center;
+    top: 35%;
+    bottom: 0;
+    padding: 0 20px;
+  }
+  .decoration_container img {
+    max-width: 35%;
   }
   .decoration1 {
     top: 6vh;
@@ -354,31 +438,204 @@ footer {
   }
   .decoration4 {
     top: 5vh;
-    right: 10vw;
-    /* display: none; */
+    right: 12vw;
   }
   .decoration5 {
     top: 14.5vh;
     right: 3vw;
-    /* display: none; */
   }
   .decoration6 {
-    top: 16vh;
-    right: -5.5vw;
+    top: 17vh;
+    right: -2.5vw;
   }
-}
+} */
 
-/* 當螢幕寬度小於或等於 480px (例如手機) */
-@media (max-width: 601px) {
+/* @media (min-width: 826px) and (max-width: 1040px) and (max-height: 946px) {
+  .main {
+    width: 90%;
+    height: 85%;
+  }
   .logo {
-    top: -55px;
+    top: 5%;
+  }
+  .logo img {
+    max-width: 640px;
+  }
+
+  .logo p {
+    font-size: 34px;
+  }
+
+  .button_container {
+    flex-wrap: wrap;
+    top: 30%;
+    padding: 0 85px;
+  }
+
+  .button_container::-webkit-scrollbar {
+    display: none;
+  }
+  .decoration_container img {
+    max-width: 55%;
+  }
+  .decoration1 {
+    top: 5vh;
+    left: 5vw;
+  }
+  .decoration2 {
+    top: 13vh;
+    left: 10vw;
+  }
+  .decoration3 {
+    top: 22vh;
+    left: 2vw;
+  }
+  .decoration4 {
+    top: 4vh;
+    right: 10vw;
+  }
+  .decoration5 {
+    top: 15vh;
+    right: 4vw;
+  }
+  .decoration6 {
+    top: 18vh;
+    right: -3vw;
+  }
+} */
+
+/* 手機尺寸 -- 橫式 */
+/* @media (max-width: 750px) {
+  .logo {
+    top: -5px;
+  }
+  .logo img {
+    width: 50vw;
+  }
+  .logo p {
+    font-size: 24px;
   }
   .button_container {
     position: absolute;
-    top: 40px;
+    top: 100px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px 0;
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .button_container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .decoration_container img {
+    max-width: 25%;
+  }
+  .decoration1 {
+    top: 3vh;
+    left: 5vw;
+  }
+  .decoration2 {
+    top: 19.5vh;
+    left: 13vw;
+  }
+  .decoration3 {
+    top: 28vh;
+    left: 2vw;
+  }
+  .decoration4 {
+    top: 2vh;
+    right: 10vw;
+  }
+  .decoration5 {
+    top: 29.5vh;
+    right: 2vw;
+  }
+  .decoration6 {
+    top: 32vh;
+    right: -4vw;
+  }
+} */
+
+/* 過度尺寸 */
+/* @media (min-width: 501px) and (max-width: 750px) and (max-height: 945px) {
+  .main {
+    width: 90%;
+    height: 85%;
+  }
+  .logo {
+    top: 1%;
+  }
+  .logo img {
+    width: 70vw;
+  }
+  .logo p {
+    font-size: 26px;
+  }
+  .button_container {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    top: 18%;
+  }
+  .main_bg_image {
+    bottom: 10px;
+  }
+  .decoration_container img {
+    max-width: 40%;
+  }
+  .decoration1 {
+    top: 5vh;
+    left: 5vw;
+  }
+  .decoration2 {
+    top: 11vh;
+    left: 8vw;
+  }
+  .decoration3 {
+    top: 18.5vh;
+    left: 2vw;
+  }
+  .decoration4 {
+    top: 2.5vh;
+    right: 6vw;
+  }
+  .decoration5 {
+    top: 15vh;
+    right: 3vw;
+  }
+  .decoration6 {
+    top: 18vh;
+    right: -4.5vw;
+  }
+} */
+
+/* 手機尺寸 -- 直式 */
+/* @media (max-width: 600px) {
+  .logo {
+    top: -40px;
+  }
+  .logo img {
+    width: 65vw;
+  }
+  .logo p {
+    font-size: 16.5px;
+  }
+  .button_container {
+    position: absolute;
+    top: 50px;
     bottom: 0;
     width: 100%;
-    /* height: 585px;  */
     height: auto;
 
     display: flex;
@@ -401,39 +658,31 @@ footer {
   .main_bg_image {
     bottom: 20px;
   }
-
   .decoration_container img {
-    max-width: 26%;
+    max-width: 25%;
   }
   .decoration1 {
-    top: 3vh;
-    left: 5vw;
+    top: 4vh;
+    left: 4.5vw;
   }
   .decoration2 {
     top: 8.5vh;
-    left: 12vw;
+    left: 10vw;
   }
   .decoration3 {
     top: 15vh;
     left: 2vw;
   }
   .decoration4 {
-    top: 2vh;
+    top: 4vh;
     right: 7vw;
   }
   .decoration5 {
-    top: 10vh;
+    top: 11vh;
     right: -2vw;
-    /* display: none; */
   }
   .decoration6 {
-    top: 11vh;
-    right: -13vw;
+    top: 12.5vh;
+    right: -12.5vw;
   }
-
-  /* 卡片文字大小 */
-  /* .button_grid .content p,
-  .notice {
-    font-size: 13px;
-  } */
-}
+} */

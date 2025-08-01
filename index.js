@@ -105,13 +105,15 @@ document
 
 // 判斷裝置是否為windows系統
 // 非windows則不顯示電腦版下載
-if (
-  !navigator.userAgent.match("windows") &&
-  !navigator.userAgent.match("Windows")
-)
-  document.getElementsByClassName("button_grid2")[0].classList.add("d-none");
-else
-  document.getElementsByClassName("button_grid2")[0].classList.remove("d-none");
+const windowsCardWrapper = document.getElementById("windows-card-wrapper");
+if (windowsCardWrapper) {
+  const isWindows = /windows/i.test(navigator.userAgent);
+  if (isWindows) {
+    windowsCardWrapper.classList.remove("d-none");
+  } else {
+    windowsCardWrapper.classList.add("d-none");
+  }
+}
 
 /* 先移除連結，未來有需要在開放
 // 返回媒體盒1.0連結
